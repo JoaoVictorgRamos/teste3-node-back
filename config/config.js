@@ -1,3 +1,4 @@
+const path = require('path');
 require('dotenv').config();
 
 console.log('MYSQLUSER:', process.env.MYSQLUSER);
@@ -35,4 +36,6 @@ const config = {
 };
 
 console.log(config);
-module.exports = config;
+module.exports = {
+  migrationPath: path.join(__dirname, 'src', 'migrations')
+};

@@ -26,6 +26,8 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       }
+    }, {
+      dialect: 'mysql'
     });
   },
   async down(queryInterface, Sequelize) {
